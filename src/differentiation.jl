@@ -15,6 +15,7 @@ Compute the **forward finite difference approximation** of the derivative of `f`
 # Example
 ```julia
 diff_forward(sin, π/4)
+```
 """
 diff_forward(f, x; h = sqrt(eps(Float64))) = (f(x+h)-f(x))/h
 
@@ -35,6 +36,7 @@ Compute the **central finite difference approximation** of the derivative of `f`
 # Example
 ```julia
 diff_central(exp, 1.0)
+```
 """
 diff_central(f, x; h = cbrt(eps(Float64))) = (f(x+h/2)-f(x-h/2))/h
 
@@ -55,6 +57,7 @@ Compute the **backward finite difference approximation** of the derivative of `f
 # Example
 ```julia
 diff_backward(log, 2.0)
+```
 """
 diff_backward(f, x; h = sqrt(eps(Float64))) = (f(x)-f(x-h))/h
 
