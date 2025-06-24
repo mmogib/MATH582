@@ -1,6 +1,7 @@
 module MATH582
 using FromFile
 using Reexport
+include("differentiation.jl")
 @reexport import LinearAlgebra: svd, transpose
 @reexport import Zygote: gradient, jacobian
 
